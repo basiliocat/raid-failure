@@ -40,6 +40,7 @@
       <select id="raidtype" class="form-control">
         <option>RAID 5</option>
         <option>RAID 6</option>
+        <option>RAID Z3</option>
       </select>
     </div>
   </div>
@@ -47,18 +48,18 @@
     <label for="drivesize" class="col-sm-3 control-label">Drive Size (GB)</label>
     <div class="col-sm-9">
       <select id="drivesize" class="form-control">
-        <option value="500">500 GB</option>
-        <option value="750">750 GB</option>
-        <option value="1000">1 TB</option>
-        <option value="1500">1.5 TB</option>
-        <option value="2000">2 TB</option>
-        <option value="3000">3 TB</option>
-        <option value="4000" selected>4 TB</option>
+        <option value="4000">4 TB</option>
         <option value="5000">5 TB</option>
         <option value="6000">6 TB</option>
         <option value="8000">8 TB</option>
         <option value="10000">10 TB</option>
         <option value="12000">12 TB</option>
+        <option value="14000">14 TB</option>
+        <option value="16000">16 TB</option>
+        <option value="18000">18 TB</option>
+        <option value="20000" selected>20 TB</option>
+        <option value="22000">22 TB</option>
+        <option value="24000">24 TB</option>
       </select>
     </div>
   </div>
@@ -76,6 +77,7 @@
         <option>10</option>
         <option>11</option>
         <option>12</option>
+        <option>13</option>
         <option>14</option>
         <option>15</option>
         <option>16</option>
@@ -83,6 +85,10 @@
         <option>18</option>
         <option>19</option>
         <option>20</option>
+        <option>21</option>
+        <option>22</option>
+        <option>23</option>
+        <option>24</option>
       </select>
     </div>
   </div>
@@ -90,15 +96,11 @@
     <label for="ureaverage" class="col-sm-3 control-label">Unrecoverable read error rate</label>
     <div class="col-sm-9">
       <select id="ureaverage" class="form-control">
-        <option value="9">10 ^ 9</option>
-        <option value="10">10 ^ 10</option>
-        <option value="11">10 ^ 11</option>
-        <option value="12">10 ^ 12</option>
         <option value="13">10 ^ 13</option>
-        <option value="14" selected>10 ^ 14</option>
-        <option value="15">10 ^ 15</option>
-        <option value="16">10 ^ 16</option>
-        <option value="17">10 ^ 17</option>
+        <option value="14">10 ^ 14 (consumer HDD)</option>
+        <option value="15" selected>10 ^ 15 (enterprise HDD)</option>
+        <option value="16">10 ^ 16 (consumer SSD)</option>
+        <option value="17">10 ^ 17 (enterprise SSD)</option>
       </select>
     </div>
   </div>
