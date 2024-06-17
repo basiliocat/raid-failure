@@ -7,7 +7,7 @@ function processRaidForm(){
 	var count = $('#drivecount option:selected').text();
 	var ure   = $('#ureaverage option:selected').val();
 	var chance = calculateRaidFailureChance(type, count, size, ure);
-	$("#resultspan").text(round(chance*1000)/1000);
+	$("#resultspan").text(Math.round(chance*1000)/1000);
 
 //	$("#resultspan").text(chance.toFixed(2).substring(2) + "%");
 }
