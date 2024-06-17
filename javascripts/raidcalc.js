@@ -18,6 +18,8 @@ function calculateRaidFailureChance(type, diskCount, disksizeGB, ure){
 		return calculateRaid5FailureChance(diskCount, disksizeGB, successChance);
 	}else if(type == "RAID 6"){
 		return calculateRaid6FailureChance(diskCount, disksizeGB, successChance);
+	}else if(type == "RAIDZ3"){
+		return calculateRaidz3FailureChance(diskCount, disksizeGB, successChance);
 	}
 }
 
@@ -30,6 +32,12 @@ function calculateRaid6FailureChance(diskCount, disksizeGB, successChance){
 	var chance1 = 1 - calculateRaid5FailureChance(diskCount, disksizeGB, successChance);
 	var chance2 = 1 - calculateRaid5FailureChance(diskCount - 1, disksizeGB, successChance);
 	return 1 - (chance1 * chance2);
+}
+function calculateRaidz3FailureChance(diskCount, disksizeGB, successChance){
+	var chance1 = 1 - calculateRaid5FailureChance(diskCount, disksizeGB, successChance);
+	var chance2 = 1 - calculateRaid5FailureChance(diskCount - 1, disksizeGB, successChance);
+	var chance3 = 1 - calculateRaid5FailureChance(diskCount - 2, disksizeGB, successChance);
+	return 1 - (chance1 * chance2 * chance3);
 }
 
 function gigabytesToBits(gigs){
